@@ -114,18 +114,18 @@ const courses = [
 ];
 
 const professors = [
-  { id: 1, name: "Efrain Bautista" },
-  { id: 2, name: "Wilder Inga" },
-  { id: 3, name: "Amador Izarra" },
-  { id: 4, name: "Elmer Zapata" },
-  { id: 5, name: "Félix Santos" },
-  { id: 6, name: "Luis Saavedra" },
-  { id: 7, name: "Nora La Serna" },
-  { id: 8, name: "Lenis Wong" },
-  { id: 9, name: "Manuel Caldas" },
-  { id: 10, name: "Luis Castillo" },
-  { id: 11, name: "David Mauricio" },
-  { id: 12, name: "Marco Rivas" },
+  { id: 1, name: "Efrain Bautista", slug: "efrain-bautista", grado:"Magister Ing. software" },
+  { id: 2, name: "Wilder Inga", slug: "wilder-inga", grado:"Magister Ing. software" },
+  { id: 3, name: "Amador Izarra", slug: "amador-izarra", grado:"Magister Ing. software" },
+  { id: 4, name: "Elmer Zapata", slug: "elmer-zapata", grado:"Magister Ing. software" },
+  { id: 5, name: "Félix Santos", slug: "felix-santos", grado:"Magister Ing. software" },
+  { id: 6, name: "Luis Saavedra", slug: "luis-saavedra", grado:"Magister Ing. software" },
+  { id: 7, name: "Nora La Serna", slug: "nora-laserna", grado:"Magister Ing. software" },
+  { id: 8, name: "Lenis Wong", slug: "lenis-wong", grado:"Magister Ing. software" },
+  { id: 9, name: "Manuel Caldas", slug: "manuel-caldas", grado:"Magister Ing. software" },
+  { id: 10, name: "Luis Castillo", slug: "luis-castillo", grado:"Magister Ing. software" },
+  { id: 11, name: "David Mauricio", slug: "david-mauricio", grado:"Magister Ing. software" },
+  { id: 12, name: "Marco Rivas", slug: "marco-rivas", grado:"Magister Ing. software" },
 ];
 
 const newCourse = {
@@ -135,9 +135,16 @@ const newCourse = {
   category: ""
 };
 
+const newProfessor = {
+  id: null,
+  name: "",
+  grado:""
+};
+
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
 module.exports = {
   newCourse,
+  newProfessor,
   courses,
   professors
 };

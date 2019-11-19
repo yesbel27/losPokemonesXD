@@ -6,11 +6,6 @@ export function getCourseSuccess(courses) {
   return { type: types.LOAD_COURSES_SUCCESS, courses };
 }
 
-export function getCourseFilter(courses,valorBuscar,flag) {
-  //console.log(valorBuscar);
-  return { type: types.LOAD_COURSES_SUCCESS, courses,data:valorBuscar,flag:flag };
-}
-
 export function createCourseSuccess(course) {
   return { type: types.CREATE_COURSE_SUCCESS, course };
 }
@@ -23,7 +18,7 @@ export function deleteCourseOptimistic(course) {
   return { type: types.DELETE_COURSE_OPTIMISTIC, course };
 }
 
-export function getCourses() {  
+export function getCourses() {
   return function (dispatch) {
     dispatch(beginApiCall());
     return courseApi
@@ -37,26 +32,6 @@ export function getCourses() {
       });
   };
 }
-
-
-export function getCoursesFilter(valorBuscar) {  
-  //console.log(valorBuscar);
-  var flag=1;
-  return function (dispatch) {
-    dispatch(beginApiCall());
-    return courseApi
-      .getCoursesFilter()
-      .then(courses => {
-        //console.log(valorBuscar);
-        dispatch(getCourseFilter(courses,valorBuscar,flag));
-      })
-      .catch(error => {
-        dispatch(apiCallError(error));
-        throw error;
-      });
-  };
-}
-
 
 export function saveCourse(course) {
   //eslint-disable-next-line no-unused-vars
